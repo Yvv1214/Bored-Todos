@@ -12,46 +12,19 @@ export const Login = () => {
     const navigate = useNavigate
 
 
-    useEffect = () => {
-        if(!store.token){
-            alert('wrong email or password')
+    useEffect (() => {
+        if(store.token && store.token != '' && store.token != undefined){
+            navigate('/home')
         }
-        else{
-            navigate('/yourlist')
-        }
+        
+    },[store.token])
+
+
+
+    const loginHandle = (e) => {
+        e.preventDefualt();
+        actions.login(email, password)
     }
-
-    // const login = () => {
-    //     login: async (username, password) => {
-    //         try {
-    //             const response = await axios.post(process.env.BACKEND_URL + '/api/login',
-    //                 { username, password },
-    //                 {
-    //                     headers: {
-    //                         'Content-Type': 'application/json'
-    //                       }
-    //                 })
-
-    //             if (response.status === 200) {
-    //                 // Login successful
-    //                 const data = response.data;
-    //                 console.log(data)
-    //                 sessionStorage.setItem('token', data.access_token)
-    //                 sessionStorage.setItem('user', data.username)
-    //                 sessionStorage.setItem('idUser', data.id)
-    //                 setStore({ token: data.access_token, user: data.username, idUser: data.id });
-    //                 return true; // Return a success indicator
-    //             } else {
-    //                 // Login failed, return the error message
-    //                 console.log('Login failed:', response.statusText);
-    //                 return { error: 'Login failed' };
-    //             }
-    //         } catch (error) {
-    //             console.error('Error during login:', error);
-    //             return { error: 'An error occurred during login' };
-    //         }
-    //     },
-    // }
 
 
 
@@ -60,7 +33,7 @@ export const Login = () => {
         <div>
             <h2 className="text-center mt-4">Please Login</h2>
 
-            <form className="container col-md-5 p-4 bg-light mb-5 login-form formDiv" >
+            <form className="container col-md-5 p-4 bg-light mb-5 login-form formDiv" onSubmit={(e) => loginHandle(e)} >
 			<div className="form-group mt-3 ">
 				<label for="email">Email</label>
 				<input type="text" className="form-control" id="email" placeholder="Email@email.com" value={email} onChange={e => setEmail(e.target.value)}></input>
