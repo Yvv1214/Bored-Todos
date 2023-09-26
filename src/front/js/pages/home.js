@@ -31,33 +31,34 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Bored? Need Something todo?</h1>
+
 			<div className="container bg-light">
 				
-			<form onSubmit={createTodo}>
-            <input 
-            className="input"
-            name="todoInput" 
-            type="text"
-            placeholder="add new task" 
-            >
-            </input>
-            </form>
+				<form onSubmit={createTodo}>
+				<input 
+				className="input"
+				name="todoInput" 
+				type="text"
+				placeholder="add new task" 
+				>
+				</input>
+				</form>
 
-			
-			<ul>
-                {list.map((list,index)=> {
+				
+				<ul>
+					{list.map((list,index)=> {
 
-                    return(
-                        <li className="theList d-flex justify-content-between"
-                            key={index}>
-                            {list}
-                            <button className='button mr-1 float-right end-0' type="button" onClick={(e) => removeTodo(e,index)}>
-                            	<i className="fas fa-times"></i>
-                            </button>
-                        </li>
-                    )
-                })}
-            </ul>
+						return(
+							<li className="theList d-flex justify-content-between"
+								key={index}>
+								{list}
+								<button className='button mr-1 float-right end-0' type="button" onClick={(e) => removeTodo(e,index)}>
+									<i className="fas fa-times"></i>
+								</button>
+							</li>
+						)
+					})}
+				</ul>
 			</div>
 		</div>
 	);

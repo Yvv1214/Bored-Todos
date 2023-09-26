@@ -16,3 +16,14 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+
+
+# @api.route('/login', methods=["POST", "GET"])
+# def login():
+#     try:
+#         email = request.json["email"]
+#         password = request.json["password"]
+
+        
+#         return jsonify({"error": str(e)}), 400
