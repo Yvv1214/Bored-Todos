@@ -41,6 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						const options = {
 							method:'POST',
 							headers: {
+								"Access-Control-Allow-Headers": "Content-Type",
 								"Content-Type": "application/json"
 						},
 							body: JSON.stringify({
@@ -51,27 +52,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 		
 				//'try' this if it doesnt work it moves to catch
 						try{
-						const resp = await fetch('https://ideal-engine-w9qp54gv7xghqg4-3001.app.github.dev/api/login', options)
+						const resp = await fetch(process.env.BACKEND_URL+'api/login', options);
 								if(resp.status !== 200) {
 								alert('an error occured');
 								return false;
 								 }
 
 						const data = await resp.json()
-							localStorage.setItem('data', data.access_token);
+							console.log(data)
+							sessionStorage.setItem('token', data.access_token);
 							setStore({token: data.access_token})	
-							console.log(getStore().token, 'access token')
-							return true;
+							console.log(token )
+							
+							return true;}
 				// access_token comes from the postman where u post/login that has the hash and the token being used is the one thats null atop
 				//the login() also stores the token with setStore and making token: null into token:hash#
-						}			
+									
 						
 						catch(error) {
 							  console.error('There was an error', error)
 							  }
 						
 				
-					}
 					},
 			
 
@@ -90,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				
 					// fetching data from the backend
-					fetch("https://yvv1214-musical-garbanzo-w9qp54gvvq7f54j-3001.preview.app.github.dev/api/private", opts)
+					fetch(process.env.BACKEND_URL+"api/private", opts)
 					.then(resp => resp.json())
 					.then(data => setStore({ message: data.message }))
 					.catch(error => 
@@ -98,22 +100,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			// changeColor: (index, color) => {
+			// 	//get the store
+			// 	const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			// 	//we have to loop the entire demo array to look for the respective index
+			// 	//and change its color
+			// 	const demo = store.demo.map((elm, i) => {
+			// 		if (i === index) elm.background = color;
+			// 		return elm;
+			// 	});
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			// 	//reset the global store
+			// 	setStore({ demo: demo });
+			// }
 		}
-	};
+	}};
 
 
 export default getState;

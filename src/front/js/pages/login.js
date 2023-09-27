@@ -9,12 +9,12 @@ export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const {actions, store} = useContext(Context)
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
 
     useEffect (() => {
         if(store.token && store.token != '' && store.token != undefined){
-            navigate('/home')
+            navigate('/yourList')
         }
         
     },[store.token])
@@ -22,7 +22,7 @@ export const Login = () => {
 
 
     const loginHandle = (e) => {
-        e.preventDefualt();
+        e.preventDefault(); //it says it uncaught after pressing enter
         actions.login(email, password)
     }
 
@@ -36,12 +36,12 @@ export const Login = () => {
             <form className="container col-md-5 p-4 bg-light mb-5 login-form formDiv" onSubmit={(e) => loginHandle(e)} >
 			<div className="form-group mt-3 ">
 				<label for="email">Email</label>
-				<input type="text" className="form-control" id="email" placeholder="Email@email.com" value={email} onChange={e => setEmail(e.target.value)}></input>
+				<input type="text" className="form-control" placeholder="Email@email.com" value={email} onChange={e => setEmail(e.target.value)}></input>
 			</div>
 
 			<div className="form-group mt-3">
 				<label for="loginPassword">Password</label>
-				<input type="password" className="form-control" id="loginPassword" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}></input>
+				<input type="password" className="form-control" autoComplete="on" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}></input>
 			</div>
 
 			<div className="form-check d-flex justify-content-center mb-2">

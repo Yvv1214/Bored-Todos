@@ -1,6 +1,16 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+
+
+                            /* --------------navBar------------ */
+
+.userIcon {
+    color:black;
+}
+
+.userIcon:hover {
+    color: green;
+}
+
+
 
 .formDiv {
     background: url('https://images.pexels.com/photos/8850807/pexels-photo-8850807.jpeg?auto=compress&cs=tinysrgb&w=600');

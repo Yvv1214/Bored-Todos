@@ -5,10 +5,15 @@ from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token
+from flask_jwt_extended import JWTManager
+from flask_jwt_extended import get_jwt_identity
+from flask_jwt_extended import jwt_required
 
 
 api = Blueprint('api', __name__)
 
+api.config["JWT_SECRET_KEY"] = "super-secret"  # Change this!
+jwt = JWTManager(api)
 
 
 @api.route('/login', methods=['POST'])
@@ -20,3 +25,16 @@ def create_token():
     
     access_token = create_access_token(identity = email)
     return jsonify(access_token=access_token), 200
+
+@api.route('/hello', methods=['GET'])
+@jwt_required()
+def hello():
+    email = get_jwt_identity()
+    message = {
+        "message":"hello" + email
+    }
+    return jsonify(message), 200
+
+
+if __name__ == "__main__":
+    api.run()
