@@ -5,3 +5,29 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+
+.carousel-item{
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 350px;
+}
+
+@media (max-width: 600px) {
+    .carousel-item{
+        background-size: cover;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        height: 300px;
+    }
+}
+
+.carousel-inner{
+    width: 90%;
+    margin: auto;
+}

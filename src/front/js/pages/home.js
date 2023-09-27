@@ -1,7 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-// import sports from 
+import sports from "../../img/sports.webp"
+import creativity from "../../img/creativity.jpeg";
+import social from "../../img/social.jpg";
+
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -9,42 +12,41 @@ export const Home = () => {
 	const [list, setList] = useState([])
 
 
-	const createTodo = () => {
-		e.preventDefault()
-		let newTodo = setTodo('e.target.todoInput.value')
-		setList(...todo, newTodo)
-		}
-
-
-	const removeTodo = (index) => {
-		e.preventDefault()
-		let filtered = todo.filter((i) => i !== index)
-		setList(filtered)
-		}
-
-
-	fetch('https://www.boredapi.com/api/activity')
-
-
 
 
 	return (
+		<>
 		<div className="text-center mt-5">
 			<h1>Bored? Need Something todo?</h1>
-
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                <img src="..." className="d-block w-100" alt="sports"/>
-                </div>
-                <div className="carousel-item">
-                <img src="..." className="d-block w-100" alt="creativity"/>
-                </div>
-                <div className="carousel-item">
-                <img src="..." className="d-block w-100" alt="social"/>
-                </div>
-            </div>
-            </div>
 		</div>
+
+            <div id="carouselSlides" className="carousel slide" data-bs-ride="carousel">
+			<div className="carousel-inner">
+				<div className="carousel-item active" style={{ backgroundImage: 'url(' + sports + ')' }}>
+				{/* <img src={sports} className="d-block w-100" alt="Sports"/> */}
+				</div>
+				<div className="carousel-item" style={{ backgroundImage: 'url(' + creativity + ')' }}>
+				{/* <img src={creativity} className="d-block w-100" alt="creativity"/> */}
+				</div>
+				<div className="carousel-item" style={{ backgroundImage: 'url(' + social + ')' }}>
+				{/* <img src={social} className="d-block w-100" alt="social"/> */}
+				</div>
+			</div>
+			
+
+				
+                
+				<div>
+				<button className="carousel-control-prev" type="button" data-bs-target="#carouselSlides" data-bs-slide="prev">
+					<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span className="visually-hidden">Previous</span>
+				</button>
+				<button className="carousel-control-next" type="button" data-bs-target="#carouselSlides" data-bs-slide="next">
+					<span className="carousel-control-next-icon" aria-hidden="true"></span>
+					<span className="visually-hidden">Next</span>
+				</button>
+				</div>
+			</div>
+		</>
 	);
 };

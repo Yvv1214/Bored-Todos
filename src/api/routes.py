@@ -12,8 +12,6 @@ from flask_jwt_extended import jwt_required
 
 api = Blueprint('api', __name__)
 
-api.config["JWT_SECRET_KEY"] = "super-secret"  # Change this!
-jwt = JWTManager(api)
 
 
 @api.route('/login', methods=['POST'])
