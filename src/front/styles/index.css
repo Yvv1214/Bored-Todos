@@ -2,6 +2,10 @@
 
                             /* --------------navBar------------ */
 
+.navbar {
+    background-color: azure;
+}                            
+
 .userIcon {
     color:black;
 }
@@ -10,6 +14,15 @@
     color: green;
 }
 
+
+                             /* --------------sportsPage------------ */
+
+@media (min-width: 1025px){
+.sportsListBtn {
+    position: absolute;
+    right: 2rem;
+    top: 16rem;
+}}
 
 
 .formDiv {
@@ -23,3 +36,5 @@
 .footerDiv {
     background-color: azure;
 }
+
+
