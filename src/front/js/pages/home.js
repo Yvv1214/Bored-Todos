@@ -23,13 +23,15 @@ export const Home = () => {
             <div id="carouselSlides" className="carousel slide" data-bs-ride="carousel">
 			<div className="carousel-inner">
 				<div className="carousel-item active" style={{ backgroundImage: 'url(' + sports + ')' }}>
-				{/* <img src={sports} className="d-block w-100" alt="Sports"/> */}
+					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">Into Sports?</p>
 				</div>
+
 				<div className="carousel-item" style={{ backgroundImage: 'url(' + creativity + ')' }}>
-				{/* <img src={creativity} className="d-block w-100" alt="creativity"/> */}
+					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">R U Creative?</p>
 				</div>
+
 				<div className="carousel-item" style={{ backgroundImage: 'url(' + social + ')' }}>
-				{/* <img src={social} className="d-block w-100" alt="social"/> */}
+					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">Have Cabin Fever?</p>
 				</div>
 			</div>
 			

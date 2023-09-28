@@ -7,13 +7,20 @@
 */
 
 
+.carousel-inner{
+    width: 90%;
+    margin: auto;
+    background: black;
+}
+
 .carousel-item{
-    background-size: cover;
+    background-size: contain;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
     height: 350px;
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -27,7 +34,8 @@
     }
 }
 
-.carousel-inner{
-    width: 90%;
-    margin: auto;
+.homePtags {
+    color: white;
 }
+
+
