@@ -41,9 +41,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						const options = {
 							method:'POST',
 							headers: {
-								"Access-Control-Allow-Headers": "Content-Type",
+								"Access-Control-Allow-Origin": "*",
 								"Content-Type": "application/json"
 						},
+							mode: 'no-cors',
 							body: JSON.stringify({
 								"email": email,
 								"password": password

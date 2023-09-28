@@ -32,7 +32,7 @@ export const Sports = () => {
             </div>
             </div>
 
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center mt-4 mb-4">
             <iframe
                 width="560"
                 height="315"
@@ -43,6 +43,12 @@ export const Sports = () => {
             />
             </div>
 
+            <h2 className="text-center">Wanna watch sports instead?</h2>
+                <p className="ps-5 pe-5 mt-5 py-2">If you're more of a spectator than a player when it comes to sports, fret not! 
+                There's a whole world of excitement waiting for you online. 
+                Imagine this: you can now immerse yourself in the thrill of live sports action without even leaving your cozy couch. 
+                Yes, you heard it right! There are countless websites out there that offer free live streaming of your favorite sports. 
+                So, kick back, relax, and get ready to witness the show of a lifetime from the comfort of your own home.</p>
         </div>
     )
 }

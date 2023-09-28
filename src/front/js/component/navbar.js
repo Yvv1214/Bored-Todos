@@ -10,7 +10,7 @@ export const Navbar = () => {
 				</Link>
 				<div className="ml-auto">
 					<Link to="/account">
-						<i class="fas fa-user fs-3 text userIcon"></i>
+						<i className="fas fa-user fs-3 text userIcon"></i>
 					</Link>
 				</div>
 			</div>
