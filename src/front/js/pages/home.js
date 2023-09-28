@@ -4,12 +4,14 @@ import "../../styles/home.css";
 import sports from "../../img/sports.webp"
 import creativity from "../../img/creativity.jpeg";
 import social from "../../img/social.jpg";
+import { LoginForm } from "../component/LoginForm";
+import { Navigate, useNavigate } from "react-router-dom";
+
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	const [todo, setTodo] = useState('')
-	const [list, setList] = useState([])
+	const Navigate = useNavigate();
 
 
 
@@ -22,16 +24,16 @@ export const Home = () => {
 
             <div id="carouselSlides" className="carousel slide" data-bs-ride="carousel">
 			<div className="carousel-inner">
-				<div className="carousel-item active" style={{ backgroundImage: 'url(' + sports + ')' }}>
+				<div className="carousel-item active" style={{ backgroundImage: 'url(' + sports + ')' }} onClick={()=> Navigate('/sports')}>
 					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">Into Sports?</p>
 				</div>
 
-				<div className="carousel-item" style={{ backgroundImage: 'url(' + creativity + ')' }}>
+				<div className="carousel-item" style={{ backgroundImage: 'url(' + creativity + ')' }} onClick={()=> Navigate('/creative')}>
 					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">R U Creative?</p>
 				</div>
 
-				<div className="carousel-item" style={{ backgroundImage: 'url(' + social + ')' }}>
-					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">Have Cabin Fever?</p>
+				<div className="carousel-item" style={{ backgroundImage: 'url(' + social + ')' }} onClick={()=> Navigate('/social')}>
+					<p className="position-absolute bottom-0 end-0 pe-4 fs-4 text homePtags">Have  Cabin Fever?</p>
 				</div>
 			</div>
 			
@@ -48,6 +50,13 @@ export const Home = () => {
 					<span className="visually-hidden">Next</span>
 				</button>
 				</div>
+
+				<p className="ps-5 pe-5 mt-5 py-2">Looking for a handy list to keep track of all your tasks? Well, look no further! 
+					Simply log in and start jotting down your to-dos. But wait, there's more! If you're feeling a bit adventurous, 
+					let the list surprise you by randomly adding some exciting tasks for you to tackle. 
+					Get ready to conquer your day with this dynamic and engaging to-do list!</p>
+
+				<LoginForm/>
 			</div>
 		</>
 	);

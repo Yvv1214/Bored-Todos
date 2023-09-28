@@ -24,6 +24,11 @@
     top: 16rem;
 }}
 
+.sportBTN {
+    width: 90%;
+    margin: auto;
+}
+
 
 .formDiv {
     background: url('https://images.pexels.com/photos/8850807/pexels-photo-8850807.jpeg?auto=compress&cs=tinysrgb&w=600');

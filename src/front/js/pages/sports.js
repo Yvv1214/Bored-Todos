@@ -38,7 +38,6 @@ export const Sports = () => {
                 height="315"
                 src={src}
                 title="Youtube Player"
-                frameborder="0"
                 allowFullScreen
             />
             </div>
@@ -49,6 +48,40 @@ export const Sports = () => {
                 Imagine this: you can now immerse yourself in the thrill of live sports action without even leaving your cozy couch. 
                 Yes, you heard it right! There are countless websites out there that offer free live streaming of your favorite sports. 
                 So, kick back, relax, and get ready to witness the show of a lifetime from the comfort of your own home.</p>
+
+            <div className="d-flex justify-content-md-between">
+                <a className="sportBTN" href='http://www.espn.com/watch' target="_blank" rel="noreferrer">
+                    <button className="btn btn-primary">ESPN</button> 
+                </a>
+                <a className="sportBTN" href='https://www.stream2watch.ws/' target="_blank" rel="noreferrer">
+                    <button className="btn btn-primary">Stream2Watch</button> 
+                </a>
+                <a className="sportBTN" href='https://crickfree.org/' target="_blank" rel="noreferrer">
+                    <button className="btn btn-primary ">Cricfree</button> 
+                </a>
+                <a className="sportBTN" href='https://www.facebook.com/watch/' target="_blank" rel="noreferrer">
+                    <button className="btn btn-primary ">Facebook Watch</button> 
+                </a>
+            </div>
+
+            <div class="container">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <a href="http://www.espn.com/watch" target="_blank" className="bg-light rounded">
+                        <div class="col text-center">
+                            ESPN
+                        </div>
+                    </a>
+                    <div class="col">
+                    <div class="p-3">Stream2Watch</div>
+                    </div>
+                    <div class="col">
+                    <div class="p-3">Cricfree</div>
+                    </div>
+                    <div class="col">
+                    <div class="p-3">Facebook Watch</div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

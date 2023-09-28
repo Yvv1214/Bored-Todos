@@ -34,6 +34,16 @@
     }
 }
 
+.carousel-control-prev, .carousel-control-next {
+    height: 350px;
+}
+
+@media (max-width: 600px) {
+.carousel-control-prev, .carousel-control-next {
+    height: 300px;
+}}
+
+
 .homePtags {
     color: white;
 }
