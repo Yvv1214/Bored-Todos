@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 
-export const Sports = () => {
+export const Creative = () => {
 
     const src = "https://www.youtube.com/embed/3mHmjSosJRg&t=85s";
     
@@ -15,8 +15,7 @@ export const Sports = () => {
 
 
         <div>
-            <h1 className="text-center mt-5">Sports you can do &#9977;</h1>
-
+            <h1 className="text-center mt-5">Fullfill Your Creativity &#9977;</h1>
             <div className="d-flex row gx-0">
                 <p className="ps-5 pe-5 mt-5 py-2 col-lg-8" style={{background: 'whitesmoke'}}>Are you an active soul, constantly seeking new adventures to cure your boredom? Well, guess what?
                  The world of sports is your ultimate playground! Brace yourself, because there's a whole universe of thrilling activities out there just waiting for you to discover. 

@@ -45,13 +45,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 								"Content-Type": "application/json"
 						},
 							mode: 'no-cors',
+							Accept:  '*/*',
 							body: JSON.stringify({
 								"email": email,
 								"password": password
 							})
 						};
 		
-				//'try' this if it doesnt work it moves to catch
 						try{
 						const resp = await fetch(process.env.BACKEND_URL+'api/login', options);
 								if(resp.status !== 200) {
@@ -66,8 +66,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 							console.log(token )
 							
 							return true;}
-				// access_token comes from the postman where u post/login that has the hash and the token being used is the one thats null atop
-				//the login() also stores the token with setStore and making token: null into token:hash#
+				//  access_token comes from the postman where u post/login that has the hash and the token being used is the one thats null atop
+				//  the login() also stores the token with setStore and making token: null into token:hash#
 									
 						
 						catch(error) {

@@ -5,13 +5,16 @@ import sports from "../../img/sports.webp"
 import creativity from "../../img/creativity.jpeg";
 import social from "../../img/social.jpg";
 import { LoginForm } from "../component/LoginForm";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { useWindowSize } from "@uidotdev/usehooks";
+import Confetti from 'react-confetti'
 
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	const Navigate = useNavigate();
+	// const { width, height } = useWindowSize()
 
 
 
@@ -57,6 +60,22 @@ export const Home = () => {
 					Get ready to conquer your day with this dynamic and engaging to-do list!</p>
 
 				<LoginForm/>
+
+				<div>
+				{/* <Confetti
+					drawShape={ctx => {
+						ctx.beginPath()
+						for(let i = 0; i < 22; i++) {
+						const angle = 0.35 * i
+						const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+						const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+						ctx.lineTo(x, y)
+						}
+						ctx.stroke()
+						ctx.closePath()
+					}}
+					/> */}
+				</div>
 			</div>
 		</>
 	);
