@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Sports = () => {
 
-    const src = "https://www.youtube.com/embed/3mHmjSosJRg&t=85s";
+    const src = "https://www.youtube.com/embed/3mHmjSosJRg";
     
 
 
@@ -33,12 +33,15 @@ export const Sports = () => {
             </div>
 
             <div className="d-flex justify-content-center mt-4 mb-4">
+
             <iframe
                 width="560"
                 height="315"
                 src={src}
                 title="Youtube Player"
                 allowFullScreen
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             />
             </div>
 

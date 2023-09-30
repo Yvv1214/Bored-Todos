@@ -9,21 +9,28 @@ export const YourList = () => {
 	const [list, setList] = useState([])
 
 
-	const createTodo = () => {
+	const createTodo = (e) => {
 		e.preventDefault()
-		let newTodo = setTodo('e.target.todoInput.value')
-		setList(...todo, newTodo)
+		let newTodo = e.target.todoInput.value
+		setList([...list, newTodo])
 		}
 
 
-	const removeTodo = (index) => {
+	const removeTodo = (e, indexToRemove) => {
 		e.preventDefault()
-		let filtered = todo.filter((i) => i !== index)
+		let filtered = list.filter((item, index, i) => index !== indexToRemove)
 		setList(filtered)
 		}
 
 
-	fetch('https://www.boredapi.com/api/activity')
+	const randomTodo = () => {
+		fetch('https://www.boredapi.com/api/activity')
+		.then(Response => Response.json())
+		.then(result => {setList([...list, result.activity]); console.log(result)})
+		
+
+	}
+	
 
 
 
@@ -46,12 +53,12 @@ export const YourList = () => {
 
 				
 				<ul>
-					{list.map((list,index)=> {
+					{list.map((item,index)=> {
 
 						return(
 							<li className="theList d-flex justify-content-between"
 								key={index}>
-								{list}
+								{item}
 								<button className='button mr-1 float-right end-0' type="button" onClick={(e) => removeTodo(e,index)}>
 									<i className="fas fa-times"></i>
 								</button>
@@ -60,6 +67,8 @@ export const YourList = () => {
 					})}
 				</ul>
 			</div>
+
+			<button onClick={randomTodo}>randomTodo</button>
 		</div>
 	);
 };
