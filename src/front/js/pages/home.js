@@ -8,14 +8,13 @@ import { LoginForm } from "../component/LoginForm";
 import { useNavigate } from "react-router-dom";
 // import { useWindowSize } from "@uidotdev/usehooks";
 import Confetti from 'react-confetti'
-
+import useWindowDimensions from "../component/GetWindowDimension";
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	const Navigate = useNavigate();
-	// const { width, height } = useWindowSize()
-
+	const {width,height} = useWindowDimensions
 
 
 

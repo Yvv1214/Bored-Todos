@@ -34,6 +34,31 @@ a {
     color: white;
 }
 
+
+                             /* --------------ListsPage------------ */
+                             
+.randomizeBTN {
+    background-color: teal;
+    color: white;
+}
+
+.listdiv {
+    border: solid 1px black;
+    background-color: aliceblue;
+    padding: 0;
+}
+
+
+.list {
+    border: solid 1px black;
+    background-color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1rem;
+}
+
+                             /* --------------login------------ */
+
 .formDiv {
     background: url('https://images.pexels.com/photos/8850807/pexels-photo-8850807.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-size: cover;

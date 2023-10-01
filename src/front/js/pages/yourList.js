@@ -27,8 +27,6 @@ export const YourList = () => {
 		fetch('https://www.boredapi.com/api/activity')
 		.then(Response => Response.json())
 		.then(result => {setList([...list, result.activity]); console.log(result)})
-		
-
 	}
 	
 
@@ -39,11 +37,11 @@ export const YourList = () => {
 		<div className="text-center mt-5">
 			<h1>Bored? Need Something todo?</h1>
 
-			<div className="container bg-light">
+			<div className="container bg-light p-0">
 				
-				<form onSubmit={createTodo}>
+				<form onSubmit={createTodo} className="border-bottom-0 py-1">
 				<input 
-				className="input"
+				className="listInput py-2"
 				name="todoInput" 
 				type="text"
 				placeholder="add new task" 
@@ -52,23 +50,22 @@ export const YourList = () => {
 				</form>
 
 				
-				<ul>
+				<div className="listdiv">
 					{list.map((item,index)=> {
 
 						return(
-							<li className="theList d-flex justify-content-between"
-								key={index}>
-								{item}
-								<button className='button mr-1 float-right end-0' type="button" onClick={(e) => removeTodo(e,index)}>
+							<div className="list d-flex justify-content-between align-middle" key={index}>
+								<p className="itemP align-middle">{item}</p>
+								<button className='button mr-1 float-right end-0 bg-danger rounded' type="button" onClick={(e) => removeTodo(e,index)}>
 									<i className="fas fa-times"></i>
 								</button>
-							</li>
+							</div>
 						)
 					})}
-				</ul>
+				</div>
 			</div>
 
-			<button onClick={randomTodo}>randomTodo</button>
+			<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
 		</div>
 	);
 };
