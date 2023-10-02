@@ -1,26 +1,35 @@
-import React, { useContext, useState } from "react";
-import { Context } from "../store/appContext";
+import React, { useContext, useEffect, useState } from "react";
 import "../../styles/home.css";
 import sports from "../../img/sports.webp"
 import creativity from "../../img/creativity.jpeg";
 import social from "../../img/social.jpg";
 import { LoginForm } from "../component/LoginForm";
 import { useNavigate } from "react-router-dom";
-// import { useWindowSize } from "@uidotdev/usehooks";
-import Confetti from 'react-confetti'
-import useWindowDimensions from "../component/GetWindowDimension";
+import ReactConfetti from 'react-confetti'
+import { Context } from "../store/appContext";
 
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+	const {action, store} = useContext(Context)
 	const Navigate = useNavigate();
-	const {width,height} = useWindowDimensions
+	const [btn, setBtn] = useState(false)
+	const [windowDimension, setDimension] = useState({width: window.innerWidth, height: window.innerHeight});
 
+	const detectSize = () => {
+		setDimension({width: window.innerWidth, height: window.innerHeight})
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', detectSize)
+		return () => {
+			window.removeEventListener('resize', detectSize)
+		}
+	},[windowDimension])
 
 
 	return (
 		<>
-		<div className="text-center mt-5">
+		<div className="text-center pt-5">
 			<h1>Bored? Need Something todo?</h1>
 		</div>
 
@@ -58,22 +67,21 @@ export const Home = () => {
 					let the list surprise you by randomly adding some exciting tasks for you to tackle. 
 					Get ready to conquer your day with this dynamic and engaging to-do list!</p>
 
-				<LoginForm/>
+				{store.token && store.token != '' && store.token != undefined ? 
+					<button className="btn btn-primary" onClick={() => Navigate('/yourList')}>To My List</button>
+					: 
+					<LoginForm/>
+				}
 
-				<div>
-				{/* <Confetti
-					drawShape={ctx => {
-						ctx.beginPath()
-						for(let i = 0; i < 22; i++) {
-						const angle = 0.35 * i
-						const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
-						const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
-						ctx.lineTo(x, y)
-						}
-						ctx.stroke()
-						ctx.closePath()
-					}}
-					/> */}
+				
+
+				<div className="d-flex justify-content-center mb-5">
+					<button onClick={()=> setBtn(!btn)} className="rounded">Confetti?</button>
+					{btn && <ReactConfetti
+						width={window.width}
+						height={window.height}
+						tweenDuration={1000}
+					/>}
 				</div>
 			</div>
 		</>

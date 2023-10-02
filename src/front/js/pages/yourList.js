@@ -30,14 +30,16 @@ export const YourList = () => {
 	}
 	
 
-
+	const total = () => {
+		return list.length
+	}
 
 
 	return (
-		<div className="text-center mt-5">
-			<h1>Bored? Need Something todo?</h1>
+		<div className="listBody text-center pt-5">
+			<h1>Bored? Your Todos</h1>
 
-			<div className="container bg-light p-0">
+			<div className=" listContainer container bg-light p-0 col-lg-5">
 				
 				<form onSubmit={createTodo} className="border-bottom-0 py-1">
 				<input 
@@ -65,7 +67,10 @@ export const YourList = () => {
 				</div>
 			</div>
 
-			<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
+			<div className="d-flex justify-content-center">
+				<div className="listTotal rounded-circle border border-dark">{total(list)}</div>
+				<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
+			</div>
 		</div>
 	);
 };

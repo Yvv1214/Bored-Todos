@@ -12,18 +12,11 @@ export const LoginForm = () => {
     const navigate = useNavigate()
 
 
-    useEffect (() => {
-        if(store.token && store.token != '' && store.token != undefined){
-            navigate('/yourList')
-        }
-        
-    },[store.token])
-
-
 
     const loginHandle = (e) => {
-        e.preventDefault(); //it says it uncaught after pressing enter
+        e.preventDefault();
         actions.login(email, password)
+        navigate('/yourList')
     }
 
 

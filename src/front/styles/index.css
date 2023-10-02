@@ -42,6 +42,18 @@ a {
     color: white;
 }
 
+.listBody {
+    background: red;
+    height: 95vh;
+    width: 100%;
+}
+
+.listContainer {
+    max-height: 467px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
 .listdiv {
     border: solid 1px black;
     background-color: aliceblue;
@@ -57,6 +69,15 @@ a {
     padding-right: 1rem;
 }
 
+.listTotal {
+    border-radius: 50%!important;
+    height: 50px;
+    margin-right: 5rem;
+    background: aliceblue;
+    text-align: center;
+    padding-top: 10px;
+}
+
                              /* --------------login------------ */
 
 .formDiv {
@@ -69,6 +90,7 @@ a {
 
 .footerDiv {
     background-color: azure;
+    width: 100%;
 }
 
 
