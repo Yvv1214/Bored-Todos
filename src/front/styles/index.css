@@ -70,12 +70,10 @@ a {
 }
 
 .listTotal {
-    border-radius: 50%!important;
-    height: 50px;
     margin-right: 5rem;
     background: aliceblue;
     text-align: center;
-    padding-top: 10px;
+    padding: 5px;
 }
 
                              /* --------------login------------ */

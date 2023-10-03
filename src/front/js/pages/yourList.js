@@ -31,7 +31,12 @@ export const YourList = () => {
 	
 
 	const total = () => {
-		return list.length
+		if(list.length > 0){
+			return 'Remaing Todos ' + list.length;
+		}
+		else{
+			return 'No Todos'
+		}
 	}
 
 
@@ -68,7 +73,7 @@ export const YourList = () => {
 			</div>
 
 			<div className="d-flex justify-content-center">
-				<div className="listTotal rounded-circle border border-dark">{total(list)}</div>
+				<div className="listTotal rounded border border-dark">{total(list)}</div>
 				<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
 			</div>
 		</div>
