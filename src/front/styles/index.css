@@ -35,6 +35,28 @@ a {
 }
 
 
+
+                             /* --------------CreativePage------------ */
+
+@media (min-width: 1025px){
+.creativeBtnDiv {
+    position: absolute;
+    right: 2rem;
+    top: 16rem;
+}}
+
+.creativeBtn {
+    background: url(https://images.pexels.com/photos/1830252/pexels-photo-1830252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: left;
+}
+
+.creativeLinks {
+    background: url(https://images.pexels.com/photos/1830252/pexels-photo-1830252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: right;
+}
+
+
+
                              /* --------------ListsPage------------ */
                              
 .randomizeBTN {
@@ -63,10 +85,11 @@ a {
 
 .list {
     border: solid 1px black;
-    background-color: aliceblue;
+    background-color: white;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 1rem;
+    padding-left: 5px;
 }
 
 .listTotal {
@@ -74,6 +97,10 @@ a {
     background: aliceblue;
     text-align: center;
     padding: 5px;
+}
+
+.randomizeBTN {
+    position: relative;
 }
 
                              /* --------------login------------ */

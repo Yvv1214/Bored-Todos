@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 
 export const Creative = () => {
 
-    const src = "https://www.youtube.com/embed/3mHmjSosJRg&t=85s";
+    // const src = "https://www.youtube.com/embed/3mHmjSosJRg&t=85s";
+    const src = "https://www.youtube.com/embed/E-Rd2mTbyrw";
     
 
 
@@ -15,18 +16,19 @@ export const Creative = () => {
 
 
         <div>
-            <h1 className="text-center mt-5">Fullfill Your Creativity &#9977;</h1>
+            <h1 className="text-center mt-5">Fullfill Your Creativity 🎭</h1>
+
             <div className="d-flex row gx-0">
-                <p className="ps-5 pe-5 mt-5 py-2 col-lg-8" style={{background: 'whitesmoke'}}>Are you an active soul, constantly seeking new adventures to cure your boredom? Well, guess what?
-                 The world of sports is your ultimate playground! Brace yourself, because there's a whole universe of thrilling activities out there just waiting for you to discover. 
-                 And here's the best part: chances are, you haven't even heard of most of them! So why not dive headfirst into the unknown and give these hidden gems a shot? 
-                 Get ready to unleash your inner explorer and embark on an exhilarating journey through uncharted sporting territories. Who knows what incredible talents and passions you might uncover along the way? 
-                 So, gear up, my friend, because it's time to break free from the mundane and embrace the extraordinary. Let the games begin!</p>
+                <p className="ps-5 pe-5 mt-5 py-2 col-lg-8">Unleash your inner artist when boredom strikes! 
+                Creativity is not just limited to drawing or painting, it can be expressed in countless ways. 
+                From music to pottery, sewing to dancing, acting and beyond, the possibilities are endless. 
+                You can even take classes or attend art festivals and conventions to explore your creative side. 
+                So why not break free from the mundane and let your imagination run wild? Who knows, you might just discover a hidden talent!</p>
             
 
-            <div className="sportsListBtn m-auto justify-content-center d-flex mt-3 col-lg-3"> 
-                <a href='https://www.topendsports.com/sport/list/index.htm' target="_blank" rel="noreferrer">
-                    <button className="btn btn-primary">Show Me the List</button> 
+            <div className="creativeBtnDiv m-auto justify-content-center d-flex mt-3 col-lg-3"> 
+                <a href='https://www.goodhousekeeping.com/life/a26872864/what-to-do-when-bored/' target="_blank" rel="noreferrer">
+                    <button className="btn btn-primary creativeBtn">The Creative List</button> 
                 </a>
             </div>
             </div>
@@ -41,38 +43,39 @@ export const Creative = () => {
             />
             </div>
 
-            <h2 className="text-center">Wanna watch sports instead?</h2>
-                <p className="ps-5 pe-5 mt-5 py-2">If you're more of a spectator than a player when it comes to sports, fret not! 
-                There's a whole world of excitement waiting for you online. 
-                Imagine this: you can now immerse yourself in the thrill of live sports action without even leaving your cozy couch. 
-                Yes, you heard it right! There are countless websites out there that offer free live streaming of your favorite sports. 
-                So, kick back, relax, and get ready to witness the show of a lifetime from the comfort of your own home.</p>
+            <h2 className="text-center">Creative Links</h2>
+                <p className="ps-5 pe-5 mt-5 py-2">Are you on the hunt for exciting events and activities that cater to your creative spirit? 
+                Look no further! There are incredible websites out there solely dedicated to connecting like-minded individuals and organizing 
+                mind-blowing events. Imagine immersing yourself in a world where everything is meticulously handcrafted by talented small designers 
+                and artists. It's a haven for those seeking unique and awe-inspiring creations. So, if you're ready to embark on a journey filled 
+                with imagination, innovation, and endless possibilities, these websites are your gateway to a vibrant community of creative souls. 
+                Get ready to be inspired and amazed!</p>
 
 
             <div class="container">
                 <div class="row row-cols-2 row-cols-lg-5 g-1 g-lg-3 text-center justify-content-between mb-5">
 
-                    <a href="http://www.espn.com/watch" target="_blank" className="bg-primary rounded">
+                    <a href="http://www.etsy.com/" target="_blank" className="bg-primary rounded creativeLinks">
                         <div class="col">
-                            <div class="p-3">ESPN</div>
+                            <div class="p-3">Etsy</div>
                         </div>
                     </a>
 
-                    <a href="https://www.stream2watch.ws/" target="_blank" className="bg-primary rounded">
+                    <a href="https://www.eventbrite.com/" target="_blank" className="bg-primary rounded creativeLinks">
                         <div class="col">
-                            <div class="p-3">Stream2Watch</div>
+                            <div class="p-3">EventBrite</div>
                         </div>
                     </a>
 
-                    <a href="https://crickfree.org/" target="_blank" className="bg-primary rounded">
+                    <a href="https://meetup.com/" target="_blank" className="bg-primary rounded creativeLinks">
                         <div class="col">
-                            <div class="p-3">Cricfree</div>
+                            <div class="p-3">Meetup</div>
                         </div>
                     </a>
 
-                    <a href="https://www.facebook.com/watch/" target="_blank" className="bg-primary rounded">
+                    <a href="https://www.creativeboom.com/" target="_blank" className="bg-primary rounded creativeLinks">
                         <div class="col">
-                            <div class="p-3">Facebook Watch</div>
+                            <div class="p-3">CreativeBoom</div>
                         </div>
                     </a>
 

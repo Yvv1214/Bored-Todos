@@ -39,6 +39,12 @@ export const YourList = () => {
 		}
 	}
 
+	const listNum = () => {
+		for (var i = 0; i <= list.length; i++) {
+			if(list.length > 0)
+			return list.indexOf(i);
+		}	}
+
 
 	return (
 		<div className="listBody text-center pt-5">
@@ -62,6 +68,7 @@ export const YourList = () => {
 
 						return(
 							<div className="list d-flex justify-content-between align-middle" key={index}>
+								<div>{listNum}</div>
 								<p className="itemP align-middle">{item}</p>
 								<button className='button mr-1 float-right end-0 bg-danger rounded' type="button" onClick={(e) => removeTodo(e,index)}>
 									<i className="fas fa-times"></i>
@@ -74,7 +81,9 @@ export const YourList = () => {
 
 			<div className="d-flex justify-content-center">
 				<div className="listTotal rounded border border-dark">{total(list)}</div>
-				<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
+				<span className="sparkleBtn">
+					<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
+				</span>
 			</div>
 		</div>
 	);

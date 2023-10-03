@@ -15,19 +15,21 @@ export const Social = () => {
 
 
         <div>
-            <h1 className="text-center mt-5">Social Activities &#9977;</h1>
+            <h1 className="text-center mt-5">Social Activities 😀</h1>
 
             <div className="d-flex row gx-0">
-                <p className="ps-5 pe-5 mt-5 py-2 col-lg-8" style={{background: 'whitesmoke'}}>Are you an active soul, constantly seeking new adventures to cure your boredom? Well, guess what?
-                 The world of sports is your ultimate playground! Brace yourself, because there's a whole universe of thrilling activities out there just waiting for you to discover. 
-                 And here's the best part: chances are, you haven't even heard of most of them! So why not dive headfirst into the unknown and give these hidden gems a shot? 
-                 Get ready to unleash your inner explorer and embark on an exhilarating journey through uncharted sporting territories. Who knows what incredible talents and passions you might uncover along the way? 
-                 So, gear up, my friend, because it's time to break free from the mundane and embrace the extraordinary. Let the games begin!</p>
+                <p className="ps-5 pe-5 mt-5 py-2 col-lg-8">Even for us introverts, there are times when we can't help but feel a touch of cabin fever. 
+                But fear not! Stepping out of our cozy abodes and venturing into the world outside can work wonders in banishing boredom. It's a chance 
+                to witness the excitement unfolding around us, to immerse ourselves in the happenings of the world. And let me tell you, it's not just 
+                about killing time; it's about discovering a whole new realm of entertainment. Who knows, you might stumble upon an event that captivates 
+                your senses, leaving you thoroughly entertained. And the best part? It's an opportunity to forge new connections, to meet fascinating 
+                individuals who could become lifelong friends or simply enjoy a delightful hangout with a cherished companion. So, why not break free 
+                from the confines of your four walls and embark on an adventure that promises both amusement and camaraderie?</p>
             
 
             <div className="sportsListBtn m-auto justify-content-center d-flex mt-3 col-lg-3"> 
-                <a href='https://www.topendsports.com/sport/list/index.htm' target="_blank" rel="noreferrer">
-                    <button className="btn btn-primary">Show Me the List</button> 
+                <a href='https://socialself.com/blog/social-activities/' target="_blank" rel="noreferrer">
+                    <button className="btn btn-success">Show Me Social Activities</button> 
                 </a>
             </div>
             </div>
@@ -42,38 +44,55 @@ export const Social = () => {
             />
             </div>
 
-            <h2 className="text-center">Wanna watch sports instead?</h2>
-                <p className="ps-5 pe-5 mt-5 py-2">If you're more of a spectator than a player when it comes to sports, fret not! 
-                There's a whole world of excitement waiting for you online. 
-                Imagine this: you can now immerse yourself in the thrill of live sports action without even leaving your cozy couch. 
-                Yes, you heard it right! There are countless websites out there that offer free live streaming of your favorite sports. 
-                So, kick back, relax, and get ready to witness the show of a lifetime from the comfort of your own home.</p>
+            <h2 className="text-center">Event Web Links</h2>
+                <p className="ps-5 pe-5 mt-5 py-2">Are you itching to break free from the confines of your house and mingle with some amazing people? 
+                Or perhaps you're yearning for a fun hangout session with a dear friend? Well, fret not, because the world wide web has got your back! 
+                There are incredible websites out there that showcase a plethora of upcoming festivals and concerts, catering to all kinds of tastes 
+                and preferences. But hold on, it's not just about the big, high-energy events that'll get your heart racing. Oh no, my friend, there's 
+                a whole world of mellow and delightful experiences waiting for you too!
+                <br></br>
+                <br></br>
+                Picture this: strolling through charming small business vendor markets, indulging in the mouthwatering delights of a carnival, or 
+                savoring a delightful brunch in a cozy little spot. And let's not forget about those small-scale, family-friendly festivals that 
+                offer a perfect blend of music and scrumptious food. These events are all about creating a warm and inviting atmosphere, where you 
+                can truly connect with others and make lasting memories.
+                <br></br>
+                <br></br>
+                Now, here's the cherry on top: if you find yourself lacking in the friend department, fear not! 
+                There are websites specifically designed to help you meet like-minded individuals who are just as eager to socialize. 
+                You can join these platforms and arrange to meet up with newfound friends in a public space for a delightful lunch. 
+                It's the perfect opportunity to expand your social circle and embark on exciting adventures together.
+                <br></br>
+                <br></br>
+                So, whether you're seeking an electrifying concert or a laid-back gathering, the internet is your ultimate guide to finding the 
+                perfect event. Get ready to step out of your comfort zone, embrace new experiences, and create unforgettable moments with 
+                incredible people. The world is waiting for you, my friend, so go out there and make the most of it!</p>
 
 
             <div class="container">
                 <div class="row row-cols-2 row-cols-lg-5 g-1 g-lg-3 text-center justify-content-between mb-5">
 
-                    <a href="http://www.espn.com/watch" target="_blank" className="bg-primary rounded">
+                    <a href="https://www.musicfestivalwizard.com/" target="_blank" className="bg-success rounded">
                         <div class="col">
-                            <div class="p-3">ESPN</div>
+                            <div class="p-3">Wizard Festival</div>
                         </div>
                     </a>
 
-                    <a href="https://www.stream2watch.ws/" target="_blank" className="bg-primary rounded">
+                    <a href="https://www.eventbrite.com/" target="_blank" className="bg-success rounded">
                         <div class="col">
-                            <div class="p-3">Stream2Watch</div>
+                            <div class="p-3">EventBrite</div>
                         </div>
                     </a>
 
-                    <a href="https://crickfree.org/" target="_blank" className="bg-primary rounded">
+                    <a href="https://nextdoor.com/events/calendar/" target="_blank" className="bg-success rounded">
                         <div class="col">
-                            <div class="p-3">Cricfree</div>
+                            <div class="p-3">NextDoor</div>
                         </div>
                     </a>
 
-                    <a href="https://www.facebook.com/watch/" target="_blank" className="bg-primary rounded">
+                    <a href="https://www.meetup.com/" target="_blank" className="bg-success rounded">
                         <div class="col">
-                            <div class="p-3">Facebook Watch</div>
+                            <div class="p-3">Meetup</div>
                         </div>
                     </a>
 
