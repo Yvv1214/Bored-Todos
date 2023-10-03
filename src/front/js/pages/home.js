@@ -26,6 +26,10 @@ export const Home = () => {
 		}
 	},[windowDimension])
 
+	const fixed = {
+		position: 'fixed'
+	}
+
 
 	return (
 		<>
@@ -61,6 +65,7 @@ export const Home = () => {
 					<span className="visually-hidden">Next</span>
 				</button>
 				</div>
+				</div>
 
 				<p className="ps-5 pe-5 mt-5 py-2">Looking for a handy list to keep track of all your tasks? Well, look no further! 
 					Simply log in and start jotting down your to-dos. But wait, there's more! If you're feeling a bit adventurous, 
@@ -80,10 +85,11 @@ export const Home = () => {
 					{btn && <ReactConfetti
 						width={window.width}
 						height={window.height}
+						style={fixed}
 						tweenDuration={1000}
 					/>}
 				</div>
-			</div>
+			
 		</>
 	);
 };
