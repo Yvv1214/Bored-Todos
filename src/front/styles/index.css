@@ -65,9 +65,16 @@ a {
 }
 
 .listBody {
-    background: red;
+    background: url(https://images.pexels.com/photos/5076513/pexels-photo-5076513.jpeg?auto=compress&cs=tinysrgb&w=600);
     height: 95vh;
     width: 100%;
+    background-size: cover;
+}
+
+@media (max-height:800px){
+.listBody{
+    height: 100vh;
+}
 }
 
 .listContainer {
@@ -111,6 +118,17 @@ a {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+                             /* --------------footer------------ */
+
+
+.linkTags{
+    color: black;
+}
+
+.linkTags:hover {
+    color: blue;
 }
 
 .footerDiv {

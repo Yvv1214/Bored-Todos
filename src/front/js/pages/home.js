@@ -73,7 +73,11 @@ export const Home = () => {
 					Get ready to conquer your day with this dynamic and engaging to-do list!</p>
 
 				{store.token && store.token != '' && store.token != undefined ? 
-					<button className="btn btn-primary" onClick={() => Navigate('/yourList')}>To My List</button>
+					<div className="d-flex justify-content-center mb-5">
+						<button className="btn btn-primary" onClick={() => Navigate('/yourList')}>
+							To My List <i className="fa-solid fa-rectangle-list"></i>
+						</button>
+					</div>
 					: 
 					<LoginForm/>
 				}

@@ -1,12 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-
+import { useNavigate } from "react-router-dom";
 
 export const YourList = () => {
 	const { store, actions } = useContext(Context);
 	const [todo, setTodo] = useState('')
 	const [list, setList] = useState([])
+	const navigate = useNavigate()
+
+	useEffect(() =>{
+		if(!store.token){
+			navigate('/login')
+		}
+	},[store.token])
 
 
 	const createTodo = (e) => {
@@ -22,6 +29,11 @@ export const YourList = () => {
 		setList(filtered)
 		}
 
+	const clearAll = (e) =>{
+		e.preventDefault()
+		setList([])
+
+	}
 
 	const randomTodo = () => {
 		fetch('https://www.boredapi.com/api/activity')
@@ -84,6 +96,10 @@ export const YourList = () => {
 				<span className="sparkleBtn">
 					<button className="btn randomizeBTN" onClick={randomTodo}>Random Todo</button>
 				</span>
+			</div>
+
+			<div>
+				<button className="btn btn-danger w-25 mt-4" onClick={clearAll}>clear All</button>
 			</div>
 		</div>
 	);

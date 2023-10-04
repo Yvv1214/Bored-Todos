@@ -25,8 +25,6 @@ export const About = () => {
 	}
 
 
-
-
     return (
 
         <div style={{height: '79.5vh'}} className="aboutBody">
@@ -40,10 +38,8 @@ export const About = () => {
                     <p>Hey there! Welcome to this website, perfect for anyone looking for something fun to do! 
                         Whether you're looking to be entertained or just need something to keep you occupied during your free time, 
                         this site has got you covered. So come on in and have some fun!</p>
-                </div>
-            </div>
-
-            <div className="d-flex justify-content-center mb-5">
+                        
+                    <div className="d-flex justify-content-center mb-5">
 					<button onClick={()=> setBtn(!btn)} className="p-2 bg-danger rounded-circle">Confetti?</button>
 					{btn && <ReactConfetti
 						width={window.width}
@@ -52,6 +48,10 @@ export const About = () => {
 						tweenDuration={1000}
 					/>}
 				</div>
+                </div>
+            </div>
+
+            
         </div>
     )
 }
