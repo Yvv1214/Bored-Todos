@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Social = () => {
 
-    const src = "https://www.youtube.com/embed/3mHmjSosJRg&t=85s";
+    const src = "https://www.youtube.com/embed/SlVKZ9zw2UE"
     
 
 

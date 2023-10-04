@@ -81,7 +81,7 @@ export const Home = () => {
 				
 
 				<div className="d-flex justify-content-center mb-5">
-					<button onClick={()=> setBtn(!btn)} className="rounded">Confetti?</button>
+					<button onClick={()=> setBtn(!btn)} className="p-2 bg-danger rounded-circle">Confetti?</button>
 					{btn && <ReactConfetti
 						width={window.width}
 						height={window.height}
