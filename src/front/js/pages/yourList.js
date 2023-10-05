@@ -20,6 +20,7 @@ export const YourList = () => {
 		e.preventDefault()
 		let newTodo = e.target.todoInput.value
 		setList([...list, newTodo])
+		store.actions.addTodo(newTodo)
 		}
 
 
@@ -51,12 +52,6 @@ export const YourList = () => {
 		}
 	}
 
-	const listNum = () => {
-		for (var i = 0; i <= list.length; i++) {
-			if(list.length > 0)
-			return list.indexOf(i);
-		}	}
-
 
 	return (
 		<div className="listBody text-center pt-5">
@@ -80,7 +75,7 @@ export const YourList = () => {
 
 						return(
 							<div className="list d-flex justify-content-between align-middle" key={index}>
-								<div>{listNum}</div>
+								<div>{index + 1}</div>
 								<p className="itemP align-middle">{item}</p>
 								<button className='button mr-1 float-right end-0 bg-danger rounded' type="button" onClick={(e) => removeTodo(e,index)}>
 									<i className="fas fa-times"></i>

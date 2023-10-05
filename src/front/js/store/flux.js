@@ -21,13 +21,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		actions: {
 
+			addTodo: (addedTodo) => {
+				setStore({
+					cart: [...new Set([...getStore().todos, addedTodo])],
+				})
+			},
+
+			removeTodo: (storedTodo) => {
+				setStore({
+					cart: getStore().cart.filter((unwantedItem) => {
+						return unwantedItem != storedTodo
+					})
+				})
+			},
+
 
 			syncTokenfromLocalStorage: () => {
 				const token = localStorage.getItem('token')
 				if (token && token != '' && token != undefined)
 					setStore({ token: token });
 			},
-
 
 
 			logout: () => {

@@ -18,7 +18,7 @@ api = Blueprint('api', __name__)
 def create_token():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
-    if email !="test" or password != "test":
+    if email !="Email" or password != "Password":
         return jsonify({'wrong Email/password'}), 401
     
     access_token = create_access_token(identity = email)

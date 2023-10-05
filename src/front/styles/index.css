@@ -122,17 +122,19 @@ a {
 
                              /* --------------AboutPage------------ */
 
-.imgDiv {
-    border: red solid 1px;
-}
 
-@media(max-width: 800px){
 .imgDiv{
     width: 100%;
 }
-}
 
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    object-fit: contain;
+  }
 
 
                              /* --------------footer------------ */
