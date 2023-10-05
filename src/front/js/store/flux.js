@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: null,
+			todos:[],
 			message: null,
 			demo: [
 				{
