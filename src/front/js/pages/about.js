@@ -1,6 +1,7 @@
 import React from "react";
 import ReactConfetti from "react-confetti";
 import { useState, useEffect } from "react";
+import dog from "../../img/dog.webp";
 
 
 
@@ -28,13 +29,35 @@ export const About = () => {
     return (
 
         <div style={{height: '79.5vh'}} className="aboutBody">
-            <h1>About</h1>
+            <h1 className="text-center mt-5 mb-3">About</h1>
 
-            <div className="d-flex">
-                <div className="imgDiv">
-                    img
+            <div className="d-flex row">
+                <div className="imgDiv col-6">
+				<div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+					<div className="carousel-inner">
+						<div className="carousel-item active">
+						<img src={dog} className="d-block w-100" alt="dog"/>
+						</div>
+						<div className="carousel-item">
+						<img src={dog} className="d-block w-100" alt="dog"/>
+						</div>
+						<div className="carousel-item">
+						<img src={dog} className="d-block w-100" alt="dog"/>
+						</div>
+					</div>
+					<button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span className="visually-hidden">Previous</span>
+					</button>
+					<button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<span className="carousel-control-next-icon" aria-hidden="true"></span>
+						<span className="visually-hidden">Next</span>
+					</button>
+					</div>
                 </div>
-                <div>
+
+
+                <div className="col-md-6">
                     <p>Hey there! Welcome to this website, perfect for anyone looking for something fun to do! 
                         Whether you're looking to be entertained or just need something to keep you occupied during your free time, 
                         this site has got you covered. So come on in and have some fun!</p>

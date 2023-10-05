@@ -99,7 +99,7 @@ export const YourList = () => {
 			</div>
 
 			<div>
-				<button className="btn btn-danger w-25 mt-4" onClick={clearAll}>clear All</button>
+				<button className="btn btn-danger w-25 mt-4" onClick={clearAll}>Clear All</button>
 			</div>
 		</div>
 	);

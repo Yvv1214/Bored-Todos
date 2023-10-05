@@ -120,6 +120,22 @@ a {
     background-repeat: no-repeat;
 }
 
+
+                             /* --------------AboutPage------------ */
+
+.imgDiv {
+    border: red solid 1px;
+}
+
+@media(max-width: 800px){
+.imgDiv{
+    width: 100%;
+}
+}
+
+
+
+
                              /* --------------footer------------ */
 
 
