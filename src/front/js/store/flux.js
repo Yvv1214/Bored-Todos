@@ -42,6 +42,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ token: token });
 			},
 
+			
+
+			setToken: () => {
+				let token = sessionStorage.getItem('token');
+				setStore({token:token})
+			},
+			
+
 
 			logout: () => {
 				const token = localStorage.removeItem('token');
