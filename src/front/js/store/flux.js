@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 
 			setToken: () => {
-				let token = sessionStorage.getItem('token');
+				let token = localStorage.getItem('token');
 				setStore({token:token})
 			},
 			
@@ -83,7 +83,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					const data = await resp.json()
 					console.log(data)
-					sessionStorage.setItem('token', data.access_token);
+					localStorage.setItem('token', data.access_token);
 					setStore({ token: data.access_token })
 					console.log(getStore().token)
 
